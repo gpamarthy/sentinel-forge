@@ -1,0 +1,17 @@
+id: public-sensitive-port-exposure
+title: Public exposure of a sensitive port detected
+summary: A security group ingress change exposed a sensitive port to the public internet.
+severity: high
+confidence: 88
+source: cloudtrail
+conditions:
+  - field: attributes.event_name
+    op: eq
+    value: "AuthorizeSecurityGroupIngress"
+  - field: attributes.public_cidrs
+    op: contains
+    value: "0.0.0.0/0"
+  - field: attributes.sensitive_ports
+    op: contains_any
+    value: [22, 3389, 5432, 3306]
+recommended_next_step: Confirm whether the exposure was intended, verify impacted assets, and revert or restrict the rule if not justified.

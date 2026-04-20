@@ -1,0 +1,36 @@
+{
+  "eventVersion": "1.08",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDAEXAMPLEUSER",
+    "arn": "arn:aws:iam::123456789012:user/network-admin",
+    "accountId": "123456789012",
+    "userName": "network-admin"
+  },
+  "eventTime": "2026-04-20T13:20:00Z",
+  "eventSource": "ec2.amazonaws.com",
+  "eventName": "AuthorizeSecurityGroupIngress",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "198.51.100.55",
+  "requestParameters": {
+    "groupId": "sg-0123456789abcdef0",
+    "ipPermissions": {
+      "items": [
+        {
+          "ipProtocol": "tcp",
+          "fromPort": 22,
+          "toPort": 22,
+          "ipRanges": {
+            "items": [
+              {
+                "cidrIp": "0.0.0.0/0"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "eventID": "55555555-5555-5555-5555-555555555555",
+  "eventType": "AwsApiCall"
+}

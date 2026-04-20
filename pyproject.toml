@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinel-forge"
+version = "0.1.0"
+description = "Defensive AWS cloud detection and response lab"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Goutham Prasanth Pamarthy", email = "gppamarthy@gmail.com" }
+]
+dependencies = [
+  "pydantic>=2.8,<3",
+  "rich>=13.7,<14",
+  "PyYAML>=6.0,<7",
+  "SQLAlchemy>=2.0,<3",
+  "structlog>=24.0,<25",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2,<9",
+  "ruff>=0.5,<1",
+]
+
+[project.scripts]
+sentinel-forge = "sentinel_forge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

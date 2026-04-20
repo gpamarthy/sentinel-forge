@@ -1,0 +1,20 @@
+{
+  "eventVersion": "1.08",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDAEXAMPLEUSER",
+    "arn": "arn:aws:iam::123456789012:user/ops-analyst",
+    "accountId": "123456789012",
+    "userName": "ops-analyst"
+  },
+  "eventTime": "2026-04-20T13:16:30Z",
+  "eventSource": "cloudtrail.amazonaws.com",
+  "eventName": "StopLogging",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "203.0.113.14",
+  "requestParameters": {
+    "name": "org-trail"
+  },
+  "eventID": "44444444-4444-4444-4444-444444444444",
+  "eventType": "AwsApiCall"
+}

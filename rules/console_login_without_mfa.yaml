@@ -1,0 +1,17 @@
+id: console-login-without-mfa
+title: Console login succeeded without MFA
+summary: A successful AWS console login occurred without MFA according to the CloudTrail event context.
+severity: high
+confidence: 85
+source: cloudtrail
+conditions:
+  - field: attributes.event_name
+    op: eq
+    value: "ConsoleLogin"
+  - field: attributes.console_login_result
+    op: eq
+    value: "Success"
+  - field: attributes.mfa_used
+    op: eq
+    value: "No"
+recommended_next_step: Confirm whether the identity should have MFA, validate the source IP, and inspect adjacent login and API activity.

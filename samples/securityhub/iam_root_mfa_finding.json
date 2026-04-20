@@ -1,0 +1,33 @@
+{
+  "SchemaVersion": "2018-10-08",
+  "Id": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:123456789012:subscription/aws-foundational-security-best-practices/v/1.0.0/IAM.6/finding/example",
+  "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+  "GeneratorId": "security-control/IAM.6",
+  "AwsAccountId": "123456789012",
+  "Types": [
+    "Software and Configuration Checks/AWS Security Best Practices"
+  ],
+  "CreatedAt": "2026-04-20T13:17:00Z",
+  "UpdatedAt": "2026-04-20T13:17:00Z",
+  "Severity": {
+    "Label": "HIGH",
+    "Normalized": 70
+  },
+  "Title": "Root user should have MFA enabled",
+  "Description": "The root user for the account does not have MFA enabled.",
+  "Resources": [
+    {
+      "Type": "AwsIamUser",
+      "Id": "arn:aws:iam::123456789012:root",
+      "Region": "us-east-1"
+    }
+  ],
+  "ProductFields": {
+    "ControlId": "IAM.6",
+    "ProviderName": "Security Hub"
+  },
+  "Workflow": {
+    "Status": "NEW"
+  },
+  "RecordState": "ACTIVE"
+}
