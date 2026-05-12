@@ -1,0 +1,11 @@
+id: cloudtrail-tampering
+title: CloudTrail logging change detected
+summary: A CloudTrail administrative action suggests logging was stopped, deleted, or materially altered.
+severity: high
+confidence: 90
+source: cloudtrail
+conditions:
+  - field: attributes.event_name
+    op: in
+    value: ["StopLogging", "DeleteTrail", "UpdateTrail"]
+recommended_next_step: Confirm whether the trail change was approved, validate if logging continuity was affected, and review adjacent IAM activity.

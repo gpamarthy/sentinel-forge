@@ -1,0 +1,11 @@
+id: security-hub-high-severity
+title: High-severity Security Hub finding
+summary: A high-severity security finding was identified by AWS Security Hub.
+severity: high
+confidence: 80
+source: securityhub
+conditions:
+  - field: attributes.severity_label
+    op: in
+    value: ["HIGH", "CRITICAL"]
+recommended_next_step: Review the specific Security Hub control failure, validate the remediation status, and resolve the underlying configuration gap.

@@ -1,0 +1,14 @@
+id: suspicious-privileged-assume-role
+title: Privileged role assumption detected
+summary: An AssumeRole event targeted a role that appears operationally sensitive or privileged.
+severity: medium
+confidence: 75
+source: cloudtrail
+conditions:
+  - field: attributes.event_name
+    op: eq
+    value: "AssumeRole"
+  - field: attributes.role_arn
+    op: contains_any
+    value: ["OrganizationAccountAccessRole", "Admin", "Administrator", "PowerUser", "BreakGlass"]
+recommended_next_step: Confirm whether the role usage was expected, review the caller's recent API history, and verify the session purpose.

@@ -1,0 +1,11 @@
+id: root-account-usage
+title: Root account activity detected
+summary: A CloudTrail event shows root account activity and should be reviewed.
+severity: high
+confidence: 90
+source: cloudtrail
+conditions:
+  - field: principal
+    op: eq
+    value: "arn:aws:iam::123456789012:root"
+recommended_next_step: Validate who performed the action, confirm the reason for root usage, and review nearby account activity.

@@ -1,0 +1,26 @@
+{
+  "eventVersion": "1.08",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDAEXAMPLEUSER",
+    "arn": "arn:aws:iam::123456789012:user/ops-analyst",
+    "accountId": "123456789012",
+    "userName": "ops-analyst"
+  },
+  "eventTime": "2026-04-20T13:11:00Z",
+  "eventSource": "sts.amazonaws.com",
+  "eventName": "AssumeRole",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "203.0.113.14",
+  "requestParameters": {
+    "roleArn": "arn:aws:iam::123456789012:role/OrganizationAccountAccessRole",
+    "roleSessionName": "ops-breakglass-session"
+  },
+  "responseElements": {
+    "credentials": {
+      "accessKeyId": "ASIAEXAMPLE"
+    }
+  },
+  "eventID": "22222222-2222-2222-2222-222222222222",
+  "eventType": "AwsApiCall"
+}
