@@ -1,8 +1,6 @@
-import json
 from pathlib import Path
-import pytest
 from sentinel_forge.database import DatabaseManager, EventRecord, FindingRecord
-from sentinel_forge.pipeline import generate_findings, load_normalized_samples
+from sentinel_forge.pipeline import load_normalized_samples
 from sentinel_forge.detections import run_detections
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,8 +12,6 @@ def test_database_persistence(tmp_path):
     db_url = f"sqlite:///{db_path}"
     
     # Mock DatabaseManager to use our test DB
-    import sentinel_forge.pipeline
-    import sentinel_forge.database
     
     # We need to ensure DatabaseManager uses the test URL
     # One way is to monkeypatch the DatabaseManager class or its default URL
