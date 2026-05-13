@@ -1,0 +1,47 @@
+name: Feature request
+description: Suggest a new rule, source, or capability
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve
+      description: Describe the detection or workflow that isn't covered today.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: One or two paragraphs. Not a full design.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of contribution
+      options:
+        - New detection rule
+        - New finding source (AWS Config, Inspector, Macie, etc.)
+        - New playbook
+        - New report template (analyst / manager)
+        - CLI ergonomics
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What else you tried or thought about.
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This isn't a request to auto-remediate findings - sentinel-forge stays read-only
+        - label: This isn't a request to ingest non-AWS sources (Azure, GCP, Kubernetes) - separate scope

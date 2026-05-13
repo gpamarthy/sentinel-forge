@@ -1,0 +1,69 @@
+name: Bug report
+description: Something doesn't work the way it should
+labels: [bug, needs-triage]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: A short description of the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Commands you ran, in order.
+      placeholder: |
+        sentinel-forge replay-findings samples/
+        sentinel-forge analyst-report --finding-id F-001
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+      description: What output you expected vs what you saw.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: sentinel-forge version
+      placeholder: '0.1.0'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Finding source involved
+      options:
+        - CloudTrail
+        - GuardDuty
+        - SecurityHub
+        - Multiple
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: '3.11.7 / 3.12.2'
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmations
+      options:
+        - label: I've searched existing issues
+          required: true
+        - label: I've sanitized any account IDs, ARNs, or IPs in the attached samples
+          required: true
