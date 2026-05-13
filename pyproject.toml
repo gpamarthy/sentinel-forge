@@ -9,7 +9,7 @@ description = "Defensive AWS cloud detection and response lab"
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [
-  { name = "Goutham Prasanth Pamarthy", email = "gppamarthy@gmail.com" }
+  { name = "Goutham Prasanth Pamarthy", email = "pamarthygp@gmail.com" }
 ]
 dependencies = [
   "pydantic>=2.8,<3",

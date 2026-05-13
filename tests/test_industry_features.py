@@ -22,10 +22,8 @@ def test_database_persistence(tmp_path):
     # 1. Test Event Persistence
     events = load_normalized_samples(SAMPLES)
     # We need to check if they were saved.
-    # Since load_normalized_samples creates its own DatabaseManager(),
-    # we should have monkeypatched it.
-
-    # Let's try a different approach: call the methods directly with the test db
+    # load_normalized_samples constructs its own DatabaseManager(),
+    # so we bypass it and call the save method directly against the test db.
     for _, event in events:
         db.save_event(event)
 

@@ -56,7 +56,7 @@ sentinel-forge manager-summary
 
 ## Architecture
 
-Sentinel Forge follows a robust defensive pipeline:
+The pipeline:
 1. **Ingest**: Loads raw JSON telemetry and identifies the source family.
 2. **Normalize**: Maps diverse payloads into a common, searchable event shape.
 3. **Detect**: Evaluates a registry of YAML-based rules against the event stream.
